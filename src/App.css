@@ -141,3 +141,59 @@ button { font-family: inherit; cursor: pointer; }
 .search-history__empty { margin: 8px 0 0; font-size: 0.85rem; color: var(--muted); }
 .search-history__list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .search-history__chip { background: var(--gold); border: 0; border-radius: 5px; padding: 4px 10px; font-weight: 600; color: #1c1f26; }
+
+/* ---------- Barra de botones ---------- */
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+.toolbar__btn {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--text);
+  border-radius: 5px;
+  padding: 7px 12px;
+  font-size: 0.85rem;
+}
+
+.toolbar__btn:hover,
+.toolbar__btn--active { background: var(--gold); color: #1c1f26; }
+.toolbar__btn--ghost { border-color: var(--muted); color: var(--muted); }
+.toolbar__count { margin-left: auto; font-size: 0.85rem; color: var(--muted); }
+
+/* ---------- Tabla ---------- */
+.player-table { overflow-x: auto; border-radius: 12px; background: #fff; }
+.player-table__table { width: 100%; border-collapse: collapse; min-width: 760px; }
+.player-table__table thead { background: #15171d; color: #fff; }
+.player-table__table th { padding: 14px 10px; text-align: left; font-size: 0.8rem; text-transform: uppercase; white-space: nowrap; }
+
+.player-table__sort {
+  margin-left: 6px;
+  background: var(--gold);
+  border: 0;
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.player-table__empty { text-align: center; padding: 30px; color: #6b7280; }
+
+/* ---------- Filas ---------- */
+.player-row { background: #fff; color: #1c1f26; cursor: pointer; border-bottom: 1px solid #eceef2; transition: background 0.2s; }
+.player-row:hover { background: #f4f6fb; }
+.player-row td { padding: 12px 10px; }
+.player-row__name { font-weight: 700; }
+.player-row__num { text-align: center; }
+.player-row--pares { background: #e3f2fd; }
+.player-row--impares { background: #fff3e0; }
+
+.player-row__star {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid #f1d98a;
+  background: #fff;
+  color: #f5c518;
+}
+
+.player-row__star--on { background: var(--gold); color: #1c1f26; }
