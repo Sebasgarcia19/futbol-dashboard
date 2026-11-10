@@ -1,16 +1,25 @@
-# React + Vite
+# Dashboard de Jugadores (Fútbol)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Examen final de Programación 4. Aplicación hecha con React y Vite.
 
-Currently, two official plugins are available:
+## Integrantes
+- Juan Sebastian Garcia
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Funcionalidades
+- Búsqueda por nombre con debounce de 300 ms y contador de resultados
+- Historial de las últimas 5 búsquedas
+- Coloreo de filas pares e impares
+- Paginación dinámica (5, 10 y 20 por página)
+- Ordenamiento por columna (ascendente, descendente y sin ordenar)
+- Modo oscuro/claro
+- Estadísticas en tiempo real con useMemo
+- Modal de detalles del jugador
+- Sistema de favoritos
+- Persistencia en localStorage
 
-## React Compiler
+## Cómo ejecutarlo
+    npm install
+    npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Despliegue
+https://TU-SITIO.netlify.app
