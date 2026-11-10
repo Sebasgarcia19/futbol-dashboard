@@ -197,3 +197,60 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .player-row__star--on { background: var(--gold); color: #1c1f26; }
+
+/* ---------- Paginación ---------- */
+.pagination { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; }
+.pagination__size { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.pagination__label,
+.pagination__info { font-size: 0.85rem; color: var(--muted); }
+.pagination__select { padding: 6px 8px; border-radius: 5px; border: 1px solid var(--border); }
+.pagination__nav { display: flex; gap: 4px; flex-wrap: wrap; background: var(--card); padding: 6px; border-radius: 8px; }
+.pagination__btn { background: transparent; border: 0; color: var(--text); padding: 6px 10px; border-radius: 5px; }
+.pagination__btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.pagination__btn--active { background: var(--orange); color: #fff; font-weight: 700; }
+
+/* ---------- Modal ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+  z-index: 50;
+  padding: 16px;
+}
+
+.modal--open { opacity: 1; visibility: visible; }
+
+.modal__card {
+  position: relative;
+  width: min(560px, 100%);
+  background: #fff;
+  color: #1c1f26;
+  border-radius: 12px;
+  padding: 26px;
+  transform: translateY(14px) scale(0.97);
+  transition: transform 0.25s;
+}
+
+.modal--open .modal__card { transform: none; }
+.modal--dark .modal__card { background: #1d212b; color: #f2f2f2; }
+.modal__x { position: absolute; top: 10px; right: 12px; border: 0; background: transparent; font-size: 1.2rem; color: inherit; }
+.modal__title { margin: 0 0 6px; }
+.modal__badge { background: var(--gold); color: #1c1f26; padding: 3px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: 700; }
+.modal__fav { position: absolute; top: 48px; right: 20px; background: var(--gold); border: 0; border-radius: 6px; padding: 6px 12px; font-weight: 700; }
+.modal__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 40px 0 20px; }
+.modal__grid dt { font-size: 0.7rem; text-transform: uppercase; opacity: 0.6; }
+.modal__grid dd { margin: 2px 0 0; font-weight: 700; }
+.modal__rating { font-size: 2rem; color: var(--gold); }
+.modal__close { background: #6b7280; color: #fff; border: 0; border-radius: 6px; padding: 8px 16px; float: right; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .dashboard { padding: 16px; }
+  .modal__grid { grid-template-columns: repeat(2, 1fr); }
+}
